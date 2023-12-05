@@ -2,28 +2,33 @@ from flask import Flask, render_template
 import sqlite3
 import pathlib
 
-base_path = pathlib.Path().cwd()
-db_name = "School.db"
-db_path = base_path / db_name
-
 app = Flask(__name__)
 
-@app.route("/")
-def index():
-    return render_template("index.html")
+# Connect to SQLite database
+conn = sqlite3.connect('coffee_shop_sales.db')
+cursor = conn.cursor()
 
-@app.route("/about")
+# Define routes
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/about')
 def about():
-    return render_template("about.html")
+    # Add logic to fetch information about the data
+    return render_template('about.html')
 
 @app.route("/data")
 def data():
-    con = sqlite3.connect(db_path)
+    # Add logic to fetch and display data
+    con = sqlite3.connect('coffee_shop_sales.db')
     cursor =con.cursor()
-    students = cursor.execute("SELECT * FROM students").fetchall()
+    coffee_sales = cursor.execute("SELECT * FROM coffee_sales").fetchall()
     con.close
     
-    return render_template("data_table_fillin.html", students=students)
+    return render_template("data_table.html", coffee_sales=coffee_sales)
 
-if __name__=="__main__":
+
+# Run the app
+if __name__ == '__main__':
     app.run(debug=True)
