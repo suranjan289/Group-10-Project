@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Website</title>
+        <title>Data Table</title>
         
     </head>
     <body>
-		<h1>My data</h1>
 
-		<ul>
+<p style="text-align:center"><span style="font-size:48px"><span style="font-family:Tahoma,Geneva,sans-serif"><strong>// Data Table //</strong></span></span></p>
 
-		{% for s in students %}
-			<li>{{s[0]}} {{s[1].upper()}} {{s[2]}}</li>
-		{% endfor %}
 
-		</ul>
+<table>
+
+
+<th>Transaction ID</th>
+<th>Transaction Date</th>
+<th>Transaction Time</th>
+<th>Transaction QTY</th>
+<th>Store ID</th>
+<th>Store Location</th>
+<th>Product ID</th>
+<th>Unit Price</th>
+<th>Product Category</th>
+<th>Product Type</th>
+<th>Product Detail</th>
+ 
+{% for s in coffee_sales %}
+
+ <tr>
+
+     <td>{{ s[0] }}</td>
+     <td>{{ s[1] }}</td>
+     <td>{{ s[2] }}</td>
+     <td>{{ s[3] }}</td>
+     <td>{{ s[4] }}</td>
+     <td>{{ s[5] }}</td>
+     <td>{{ s[6] }}</td>
+     <td>{{ s[7] }}</td>
+     <td>{{ s[8] }}</td>
+     <td>{{ s[9] }}</td>
+     <td>{{ s[10] }}</td>
+     <td>{{ s[11] }}</td>
+
+
+
+ </tr>
+ {% endfor %}
+ </table>
+
+
     </body>
 </html>
 
