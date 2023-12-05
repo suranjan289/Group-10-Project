@@ -18,16 +18,30 @@
         10% formatting
 
 1. Original dataset from Kaggle: https://www.kaggle.com/datasets/ahmedabbas757/coffee-sales
+<br>
+<br>
    Overview of variables:
-   
+   <br>
+   <br>
    transaction_id : Unique sequential ID representing an individual transaction
+   <br>
    transaction_date : Date of the transaction (MM/DD/YY)
+   <br>
    transaction_time : Timestamp of the transaction (HH:MM:SS)
+   <br>
    transaction_qty : Quantity of items sold
+   <br>
    store_id : Unique ID of the coffee shop where the transaction took place
+   <br>
    store_location : Location of the coffee shop where the transaction took place
+   <br>
    product_id : Unique ID of the product sold
+   <br>
    unit_price : Retail price of the product sold
+   <br>
    product_category : Description of the product category
+   <br>
    product_type : Description of the product type
+   <br>
    product_detail : Description of the product being sold
+   <br>
