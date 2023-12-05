@@ -19,7 +19,6 @@
 
 1. Original dataset from Kaggle: https://www.kaggle.com/datasets/ahmedabbas757/coffee-sales
 <br>
-<br>
    Overview of variables:
    <br>
    <br>
